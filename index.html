@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IN-101 English I (A1.1) | UNAH Learning Resources</title>
+<meta name="description" content="Learning resources (URA) for the 13 lessons of IN-101 English I, A1.1, UNAH. In English and Spanish.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --unah:#003772;      /* UNAH institutional blue */
+  --unah-deep:#00264f;
+  --gold:#F5A623;      /* UNAH accent */
+  --gold-soft:#FFF1D6;
+  --blue:#0055A4;      /* French-flag blue: interactive */
+  --blue-soft:#E3EEF9;
+  --red:#C8102E;       /* flag red: warnings only */
+  --red-soft:#FCE8EB;
+  --green:#0E7C5A;
+  --green-soft:#E1F3EC;
+  --bg:#F4F7FC;
+  --paper:#FFFFFF;
+  --ink:#10233F;
+  --muted:#5A6B85;
+  --line:#D8E1EE;
+  --radius-lg:22px;
+  --radius-md:14px;
+  --radius-sm:8px;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--unah-deep);padding:10px 14px;border-radius:8px;font-weight:700;z-index:50}
+.skip:focus{top:12px}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(0,38,79,.96);backdrop-filter:blur(8px);color:#fff;border-bottom:3px solid var(--gold)}
+.topbar .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 1rem/1.1 var(--display);white-space:nowrap}
+.brand .seal{height:32px;padding:0 10px;border-radius:999px;background:var(--gold);color:var(--unah-deep);display:grid;place-items:center;font:800 .8rem var(--display);letter-spacing:.02em}
+.brand small{display:block;font:400 .75rem var(--body);opacity:.75}
+.route{flex:1;display:flex;gap:6px;justify-content:center}
+.route a{flex:1;max-width:150px;text-decoration:none;color:#fff;font-size:.8rem;line-height:1.2;padding:6px 8px 8px;border-radius:10px;position:relative;opacity:.85}
+.route a:hover{background:rgba(255,255,255,.08);opacity:1}
+.route a::after{content:"";position:absolute;left:8px;right:8px;bottom:2px;height:4px;border-radius:4px;background:rgba(255,255,255,.22)}
+.route a.done::after{background:var(--gold)}
+.route a b{display:block;font:700 .95rem var(--display)}
+.lang{color:#fff;text-decoration:none;font:700 .85rem var(--display);border:2px solid rgba(255,255,255,.35);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.lang:hover{border-color:var(--gold);color:var(--gold)}
+.progress-pill{font:700 .9rem var(--display);background:rgba(255,255,255,.1);padding:8px 12px;border-radius:999px;white-space:nowrap}
+.progress-pill span{color:var(--gold)}
+@media (max-width:860px){.route{display:none}.brand small{display:none}.topbar .wrap{justify-content:space-between}}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1200px 500px at 85% -10%, #0a4c94 0%, transparent 60%), var(--unah);color:#fff;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;background:linear-gradient(90deg,var(--gold) 0 60%,#fff 60% 80%,var(--red) 80%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:64px 0 72px}
+.hero .unit{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:.9rem}
+.hero .unit strong{color:var(--gold)}
+.hero h1{font:800 clamp(2.4rem,5.4vw,4.2rem)/1.02 var(--display);letter-spacing:-.02em;margin:18px 0 16px}
+.hero p.lead{font-size:1.15rem;max-width:34ch;opacity:.92;margin:0 0 28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font:700 1rem var(--display);padding:13px 20px;border-radius:12px;transition:transform .15s ease, background .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--unah-deep)}
+.btn-gold:hover{background:#ffb944}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{border-color:#fff}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#00468a}
+.btn-line{background:var(--paper);color:var(--blue);border:2px solid var(--blue-soft)}
+.btn-line:hover{border-color:var(--blue)}
+.btn-sm{padding:8px 14px;font-size:.92rem;border-radius:10px}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+
+/* word bridge */
+.bridge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:28px 28px 22px}
+.bridge .row{display:flex;align-items:center;gap:12px;font-size:.85rem;opacity:.8;margin-bottom:6px}
+.bridge .flag{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:700;font-size:.78rem}
+.bridge .es{background:rgba(255,255,255,.14)}
+.bridge .en{background:var(--gold);color:var(--unah-deep)}
+.word{font:800 clamp(2rem,4.6vw,3.4rem)/1.1 var(--display);letter-spacing:-.01em;min-height:1.2em;white-space:nowrap}
+.word .same{color:#fff}
+.word .tail{display:inline-block;position:relative;vertical-align:top}
+.word .tail span{display:inline-block;transition:transform .55s cubic-bezier(.2,.8,.2,1), opacity .45s ease}
+.word .tail .from{color:#ff9aa8}
+.word .tail .to{color:var(--gold);position:absolute;left:0;top:0;opacity:0;transform:translateY(60%)}
+.word.swap .tail .from{opacity:0;transform:translateY(-60%)}
+.word.swap .tail .to{opacity:1;transform:none}
+.bridge .note{margin:14px 0 0;font-size:.95rem;opacity:.85}
+.bridge .dots{display:flex;gap:6px;margin-top:16px}
+.bridge .dots i{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.25)}
+.bridge .dots i.on{background:var(--gold)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:44px 0 56px;gap:32px}}
+
+/* ---------- sections ---------- */
+main section{padding:64px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font:800 clamp(1.7rem,3vw,2.3rem)/1.1 var(--display);margin:0;color:var(--unah);letter-spacing:-.01em}
+.sec-head p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+
+/* video */
+.video-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.frame{position:relative;padding-bottom:56.25%;border-radius:var(--radius-lg);overflow:hidden;background:#000;box-shadow:0 18px 40px -24px rgba(0,38,79,.6)}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.goals h3{font:700 1.2rem var(--display);margin:0 0 10px;color:var(--unah)}
+.goals ul{padding:0;margin:0 0 18px;list-style:none}
+.goals li{padding:10px 0 10px 36px;border-bottom:1px dashed var(--line);position:relative}
+.goals li::before{content:"";position:absolute;left:4px;top:14px;width:18px;height:18px;border-radius:50%;border:3px solid var(--gold)}
+details.comp{border-top:1px solid var(--line);padding-top:12px}
+details.comp summary{cursor:pointer;font-weight:700;color:var(--blue)}
+details.comp p{font-size:.95rem;color:var(--muted)}
+@media (max-width:860px){.video-grid{grid-template-columns:1fr}}
+
+/* activity route */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-bottom:8px}
+.stop{position:relative;padding:0 16px 0 0}
+.stop .node{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stop .num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:800 1.2rem var(--display);background:var(--paper);color:var(--unah);border:3px solid var(--unah);position:relative;z-index:1;flex:none}
+.stop.done .num{background:var(--gold);border-color:var(--gold);color:var(--unah-deep)}
+.stop .rail{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.stop.done .rail{background:var(--gold)}
+.stop:last-child .rail{visibility:hidden}
+.stop .kind{font-size:.85rem;color:var(--muted)}
+.stop h3{font:700 1.08rem/1.25 var(--display);margin:2px 0 8px}
+.stop h3 a{color:var(--ink);text-decoration:none}
+.stop h3 a:hover{color:var(--blue);text-decoration:underline}
+.pct{display:inline-block;font:800 .9rem var(--display);background:var(--gold-soft);color:#8a5a00;padding:2px 8px;border-radius:6px}
+.stop p{margin:8px 0 0;font-size:.95rem;color:var(--muted)}
+.cal{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.path{grid-template-columns:1fr;gap:22px}.stop .rail{display:none}}
+
+/* activity detail blocks */
+.act{display:grid;grid-template-columns:280px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.act:first-of-type{border-top:0}
+.act aside{position:sticky;top:100px;align-self:start}
+.act .tag{display:inline-block;font-weight:700;font-size:.85rem;color:var(--blue);background:var(--blue-soft);padding:3px 10px;border-radius:999px}
+.act aside h3{font:800 1.45rem/1.15 var(--display);margin:10px 0 8px;color:var(--unah)}
+.act aside p{margin:0 0 14px;color:var(--muted)}
+.check{display:flex;gap:10px;align-items:center;cursor:pointer;font-weight:700;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--paper);user-select:none}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.check.on{border-color:var(--green);background:var(--green-soft);color:var(--green)}
+.res-list{display:grid;gap:12px}
+.res{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px 18px}
+.res .stage{width:56px;text-align:center;font:800 .78rem/1.1 var(--display);color:var(--unah)}
+.res .stage b{display:block;font-size:1.4rem;color:var(--gold)}
+.res h4{margin:0;font:700 1.05rem/1.3 var(--display)}
+.res .src{font-size:.88rem;color:var(--muted)}
+.res .what{margin:4px 0 0}
+.res .helps{margin:6px 0 0;font-size:.88rem;color:var(--muted)}
+.res .req{font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--green-soft);color:var(--green);margin-left:6px;vertical-align:middle}
+.res .req.opt{background:#EEF1F6;color:var(--muted)}
+.res.extra{border:2px dashed var(--gold);background:var(--gold-soft)}
+.res.visited{border-left:6px solid var(--green)}
+@media (max-width:860px){.act{grid-template-columns:1fr}.act aside{position:static}.res{grid-template-columns:1fr}.res .stage{text-align:left;width:auto}.res .stage b{display:inline;margin-right:6px}}
+
+/* practice lab */
+.lab{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.lab .panel h3{font:800 1.3rem var(--display);color:var(--unah);margin:0 0 4px}
+.lab .panel > p{color:var(--muted);margin:0 0 16px}
+.lab .wide{grid-column:1/-1}
+.abc{display:grid;grid-template-columns:repeat(13,1fr);gap:6px}
+.abc button{aspect-ratio:1;border:2px solid var(--line);background:var(--paper);border-radius:10px;font:800 1.15rem var(--display);color:var(--unah);cursor:pointer}
+.abc button.tricky{border-color:var(--gold);background:var(--gold-soft)}
+.abc button:hover{border-color:var(--blue);color:var(--blue)}
+.abc button.say{background:var(--blue);border-color:var(--blue);color:#fff}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);margin-top:12px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:2px solid var(--gold);background:var(--gold-soft)}
+.spell{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+input[type=text]{font:1rem var(--body);padding:11px 14px;border:2px solid var(--line);border-radius:10px;flex:1;min-width:180px;color:var(--ink);background:#fff}
+input[type=text]:focus{border-color:var(--blue);outline:none}
+.phrases{display:grid;gap:8px}
+.phrase{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--bg)}
+.phrase .play{flex:none}
+.play{width:40px;height:40px;border-radius:50%;border:0;background:var(--blue);color:#fff;cursor:pointer;display:grid;place-items:center}
+.play svg{width:16px;height:16px}
+.play:hover{background:#00468a}
+.phrase span{font-weight:700}
+.phrase small{display:block;font-weight:400;color:var(--muted)}
+.sorter .card{border:2px solid var(--line);border-radius:var(--radius-md);padding:22px;text-align:center}
+.sorter .w{font:800 2.2rem var(--display);color:var(--unah)}
+.sorter .choices{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.sorter .fb{min-height:3.2em;margin-top:14px;font-weight:700}
+.fb.ok{color:var(--green)}
+.fb.no{color:var(--red)}
+.sorter .score{font-size:.9rem;color:var(--muted);margin-top:6px}
+.builder .out{margin-top:16px;padding:18px 20px;border-radius:var(--radius-md);background:var(--unah);color:#fff;font:700 1.15rem/1.6 var(--display)}
+.builder .out em{font-style:normal;color:var(--gold)}
+.builder .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.builder label{font-size:.9rem;font-weight:700;color:var(--muted);display:block;margin-bottom:4px}
+.builder select{font:1rem var(--body);padding:11px 12px;border:2px solid var(--line);border-radius:10px;width:100%;background:#fff;color:var(--ink)}
+@media (max-width:860px){.lab{grid-template-columns:1fr}.abc{grid-template-columns:repeat(7,1fr)}.builder .grid{grid-template-columns:1fr}}
+
+/* career + steps */
+.career{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--unah);color:#fff;display:grid;place-items:center;font:800 1rem var(--display)}
+.steps b{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--blue-soft);color:var(--blue);padding:4px 12px;border-radius:999px;font-weight:700;font-size:.92rem}
+@media (max-width:860px){.career{grid-template-columns:1fr}}
+
+/* ai rules + tools */
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.rule{border-radius:var(--radius-md);padding:16px;border:2px solid}
+.rule h4{margin:0 0 6px;font:800 1.05rem var(--display)}
+.rule.ok{border-color:#9fd6c2;background:var(--green-soft)}
+.rule.ok h4{color:var(--green)}
+.rule.care{border-color:#f6cf86;background:var(--gold-soft)}
+.rule.care h4{color:#8a5a00}
+.rule.no{border-color:#f0a7b2;background:var(--red-soft)}
+.rule.no h4{color:var(--red)}
+.tools{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.sofia{background:linear-gradient(135deg,var(--unah) 0%,#0a4c94 100%);color:#fff;border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
+.sofia h3{font:800 1.6rem var(--display);margin:0 0 8px}
+.sofia p{opacity:.9;margin:0 0 18px}
+.sofia .avatar{width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--unah-deep);display:grid;place-items:center;font:800 1.7rem var(--display);margin-bottom:14px}
+.soon{display:inline-block;background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-weight:700;font-size:.9rem}
+@media (max-width:860px){.tools,.rules{grid-template-columns:1fr}}
+
+/* more + refs + footer */
+.more{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.refs{font-size:.92rem;color:var(--muted)}
+.refs p{margin:0 0 10px;padding-left:24px;text-indent:-24px;overflow-wrap:anywhere}
+.spanish{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--gold);color:var(--unah-deep);border-radius:var(--radius-lg);padding:26px 28px;margin-top:28px}
+.spanish h3{margin:0;font:800 1.4rem var(--display)}
+.spanish p{margin:4px 0 0}
+.spanish .btn{background:var(--unah);color:#fff}
+footer{background:var(--unah-deep);color:#cfe0f5;padding:36px 0;font-size:.92rem;margin-top:24px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;visibility:hidden;background:var(--green);color:#fff;font-weight:700;padding:12px 18px;border-radius:12px;transition:transform .3s ease;z-index:60}
+.toast.show{transform:translateX(-50%);opacity:1;visibility:visible}
+.toast{transition:transform .3s ease,opacity .3s ease,visibility .3s}
+@media (max-width:860px){.more{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* additions for the multi-lesson template */
+.video-soon{border-radius:var(--radius-lg);background:var(--unah);color:#fff;padding:48px 28px;text-align:center;font:700 1.15rem var(--display);min-height:220px;display:grid;place-items:center}
+.lessons-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+.lessons-nav a{text-decoration:none}
+.builder .grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.sorter .w{overflow-wrap:anywhere}
+.path.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.path.three{grid-template-columns:1fr}}
+
+.units{display:grid;gap:40px}
+.unit-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px;border-bottom:3px solid var(--gold);padding-bottom:8px}
+.unit-h h2{font:800 clamp(1.3rem,2.4vw,1.7rem)/1.15 var(--display);color:var(--unah);margin:0}
+.unit-h span{font:800 1rem var(--display);color:#8a5a00;background:var(--gold-soft);padding:3px 10px;border-radius:8px}
+.grid-l{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.lcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-md);padding:18px;display:flex;flex-direction:column;gap:10px}
+.lcard .top{display:flex;align-items:center;gap:12px}
+.lcard .num{width:44px;height:44px;border-radius:50%;background:var(--unah);color:#fff;display:grid;place-items:center;font:800 1.15rem var(--display);flex:none}
+.lcard.done .num{background:var(--gold);color:var(--unah-deep)}
+.lcard h3{margin:0;font:700 1.05rem/1.25 var(--display)}
+.lcard .meta{font-size:.88rem;color:var(--muted)}
+.lcard .bar{height:6px;border-radius:6px;background:var(--line);overflow:hidden}
+.lcard .bar i{display:block;height:100%;background:var(--green);width:0}
+.lcard .go{display:flex;gap:8px;margin-top:auto}
+.lcard .go a{flex:1;justify-content:center}
+.hero .wrap.single{grid-template-columns:1fr}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="#top"><span class="seal" aria-hidden="true">UNAH</span><span>English I<small>IN-101, A1.1</small></span></a>
+  <span style="flex:1"></span>
+  <div class="progress-pill" aria-live="polite"><span id="allDone">0</span>/13</div>
+</div></header>
+<div class="hero" id="top"><div class="wrap single">
+  <div>
+    <span class="unit">III PAC 2026 <strong>100%</strong></span>
+    <h1>English I</h1>
+    <p class="lead" style="max-width:52ch">13 lessons. Resources, practice and help for each activity.<br><span lang="es">13 lecciones. Recursos, práctica y ayuda para cada actividad.</span></p>
+    <div class="actions">
+      <a class="btn btn-gold" href="ura1/en/index.html" id="cont">Start Lesson 1</a>
+      <a class="btn btn-ghost" href="https://drive.google.com/file/d/1Pk6PYLuJmzpOteETqkMVe-X6XvAi9x1Y/view" target="_blank" rel="noopener">Calendar / Calendario</a>
+    </div>
+  </div>
+</div></div>
+<main id="main"><section><div class="wrap units">
+<div class="unit-block" role="region" aria-label="Introductory Unit"><div class="unit-h"><h2>Introductory Unit</h2><span>7%</span></div>
+<div class="grid-l"><article class="lcard" data-id="IN101-L01" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">1</span><div><h3>Discovering English Together</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 1 · 7% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura1/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura1/es/index.html" lang="es">Español</a></div>
+</article></div></div><div class="unit-block" role="region" aria-label="Unit I: First Communicative Encounters"><div class="unit-h"><h2>Unit I: First Communicative Encounters</h2><span>31%</span></div>
+<div class="grid-l"><article class="lcard" data-id="IN101-L02" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">2</span><div><h3>Greetings and Farewells</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 2 · 7% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura2/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura2/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L03" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">3</span><div><h3>Introducing Yourself and Others</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 3 · 8% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura3/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura3/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L04" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">4</span><div><h3>Basic Personal Information</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 4 · 8% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura4/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura4/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L05" data-total="3">
+  <div class="top"><span class="num" aria-hidden="true">5</span><div><h3>Courtesy and Everyday Contexts</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 5 · 8% · <span class="cnt">0</span>/3</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura5/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura5/es/index.html" lang="es">Español</a></div>
+</article></div></div><div class="unit-block" role="region" aria-label="Unit II: Personal Portraits and Family"><div class="unit-h"><h2>Unit II: Personal Portraits and Family</h2><span>30%</span></div>
+<div class="grid-l"><article class="lcard" data-id="IN101-L06" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">6</span><div><h3>Describing People</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 6 · 7% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura6/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura6/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L07" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">7</span><div><h3>Family and Relationships</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 7 · 8% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura7/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura7/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L08" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">8</span><div><h3>Likes and Preferences</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 8 · 7% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura8/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura8/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L09" data-total="3">
+  <div class="top"><span class="num" aria-hidden="true">9</span><div><h3>Comparing People and Characteristics</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 9 · 8% · <span class="cnt">0</span>/3</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura9/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura9/es/index.html" lang="es">Español</a></div>
+</article></div></div><div class="unit-block" role="region" aria-label="Unit III: Daily Life and Personal Organization"><div class="unit-h"><h2>Unit III: Daily Life and Personal Organization</h2><span>32%</span></div>
+<div class="grid-l"><article class="lcard" data-id="IN101-L10" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">10</span><div><h3>Daily and Household Activities</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 10 · 8% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura10/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura10/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L11" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">11</span><div><h3>My Daily Schedule</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 11 · 8% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura11/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura11/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L12" data-total="4">
+  <div class="top"><span class="num" aria-hidden="true">12</span><div><h3>Healthy Habits and Frequency</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 12 · 7% · <span class="cnt">0</span>/4</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura12/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura12/es/index.html" lang="es">Español</a></div>
+</article><article class="lcard" data-id="IN101-L13" data-total="3">
+  <div class="top"><span class="num" aria-hidden="true">13</span><div><h3>My Life, My Routine — Final Project</h3>
+  <div class="meta"><span lang="en">Lesson</span> / <span lang="es">Lección</span> 13 · 9% · <span class="cnt">0</span>/3</div></div></div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="go"><a class="btn btn-blue btn-sm" href="ura13/en/index.html" lang="en">English</a><a class="btn btn-line btn-sm" href="ura13/es/index.html" lang="es">Español</a></div>
+</article></div></div>
+</div></section></main>
+<footer><div class="wrap">
+  <div><strong>Universidad Nacional Autónoma de Honduras</strong><br>Facultad de Humanidades y Artes, Departamento de Lenguas Extranjeras, Sección de Inglés</div>
+  <div>IN-101 English I / Inglés I, A1.1<br>UNAH Virtual Campus / Campus Virtual de la UNAH</div>
+</div></footer>
+<script>
+let finished = 0, next = null;
+document.querySelectorAll(".lcard").forEach(c => {
+  let done = [];
+  try { done = (JSON.parse(localStorage.getItem("ura-" + c.dataset.id)) || {}).done || []; } catch(e) {}
+  const total = Number(c.dataset.total), n = Math.min(done.length, total);
+  c.querySelector(".cnt").textContent = n;
+  c.querySelector(".bar i").style.width = (100 * n / total) + "%";
+  if (n === total) { c.classList.add("done"); finished++; }
+  else if (!next) next = c;
+});
+document.getElementById("allDone").textContent = finished;
+if (next && next.dataset.id !== "IN101-L01") {
+  const num = Number(next.dataset.id.slice(-2));
+  const b = document.getElementById("cont"); b.textContent = "Continue: Lesson " + num; b.href = "ura" + num + "/en/index.html";
+}
+</script>
+</body></html>

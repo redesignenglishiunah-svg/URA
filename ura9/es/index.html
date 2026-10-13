@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lección 9: Comparing People and Characteristics | IN-101 Inglés I | UNAH</title>
+<meta name="description" content="Más alto, más joven, más creativo: compara a las personas que conoces.">
+<link rel="alternate" hreflang="en" href="../en/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --unah:#003772;      /* UNAH institutional blue */
+  --unah-deep:#00264f;
+  --gold:#F5A623;      /* UNAH accent */
+  --gold-soft:#FFF1D6;
+  --blue:#0055A4;      /* French-flag blue: interactive */
+  --blue-soft:#E3EEF9;
+  --red:#C8102E;       /* flag red: warnings only */
+  --red-soft:#FCE8EB;
+  --green:#0E7C5A;
+  --green-soft:#E1F3EC;
+  --bg:#F4F7FC;
+  --paper:#FFFFFF;
+  --ink:#10233F;
+  --muted:#5A6B85;
+  --line:#D8E1EE;
+  --radius-lg:22px;
+  --radius-md:14px;
+  --radius-sm:8px;
+  --display:"Bricolage Grotesque", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--unah-deep);padding:10px 14px;border-radius:8px;font-weight:700;z-index:50}
+.skip:focus{top:12px}
+
+/* ---------- top bar ---------- */
+.topbar{position:sticky;top:0;z-index:30;background:rgba(0,38,79,.96);backdrop-filter:blur(8px);color:#fff;border-bottom:3px solid var(--gold)}
+.topbar .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font:700 1rem/1.1 var(--display);white-space:nowrap}
+.brand .seal{height:32px;padding:0 10px;border-radius:999px;background:var(--gold);color:var(--unah-deep);display:grid;place-items:center;font:800 .8rem var(--display);letter-spacing:.02em}
+.brand small{display:block;font:400 .75rem var(--body);opacity:.75}
+.route{flex:1;display:flex;gap:6px;justify-content:center}
+.route a{flex:1;max-width:150px;text-decoration:none;color:#fff;font-size:.8rem;line-height:1.2;padding:6px 8px 8px;border-radius:10px;position:relative;opacity:.85}
+.route a:hover{background:rgba(255,255,255,.08);opacity:1}
+.route a::after{content:"";position:absolute;left:8px;right:8px;bottom:2px;height:4px;border-radius:4px;background:rgba(255,255,255,.22)}
+.route a.done::after{background:var(--gold)}
+.route a b{display:block;font:700 .95rem var(--display)}
+.lang{color:#fff;text-decoration:none;font:700 .85rem var(--display);border:2px solid rgba(255,255,255,.35);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.lang:hover{border-color:var(--gold);color:var(--gold)}
+.progress-pill{font:700 .9rem var(--display);background:rgba(255,255,255,.1);padding:8px 12px;border-radius:999px;white-space:nowrap}
+.progress-pill span{color:var(--gold)}
+@media (max-width:860px){.route{display:none}.brand small{display:none}.topbar .wrap{justify-content:space-between}}
+
+/* ---------- hero ---------- */
+.hero{background:radial-gradient(1200px 500px at 85% -10%, #0a4c94 0%, transparent 60%), var(--unah);color:#fff;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;background:linear-gradient(90deg,var(--gold) 0 60%,#fff 60% 80%,var(--red) 80%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:64px 0 72px}
+.hero .unit{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:.9rem}
+.hero .unit strong{color:var(--gold)}
+.hero h1{font:800 clamp(2.4rem,5.4vw,4.2rem)/1.02 var(--display);letter-spacing:-.02em;margin:18px 0 16px}
+.hero p.lead{font-size:1.15rem;max-width:34ch;opacity:.92;margin:0 0 28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font:700 1rem var(--display);padding:13px 20px;border-radius:12px;transition:transform .15s ease, background .15s ease}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--unah-deep)}
+.btn-gold:hover{background:#ffb944}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{border-color:#fff}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#00468a}
+.btn-line{background:var(--paper);color:var(--blue);border:2px solid var(--blue-soft)}
+.btn-line:hover{border-color:var(--blue)}
+.btn-sm{padding:8px 14px;font-size:.92rem;border-radius:10px}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+
+/* word bridge */
+.bridge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:28px 28px 22px}
+.bridge .row{display:flex;align-items:center;gap:12px;font-size:.85rem;opacity:.8;margin-bottom:6px}
+.bridge .flag{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:700;font-size:.78rem}
+.bridge .es{background:rgba(255,255,255,.14)}
+.bridge .en{background:var(--gold);color:var(--unah-deep)}
+.word{font:800 clamp(2rem,4.6vw,3.4rem)/1.1 var(--display);letter-spacing:-.01em;min-height:1.2em;white-space:nowrap}
+.word .same{color:#fff}
+.word .tail{display:inline-block;position:relative;vertical-align:top}
+.word .tail span{display:inline-block;transition:transform .55s cubic-bezier(.2,.8,.2,1), opacity .45s ease}
+.word .tail .from{color:#ff9aa8}
+.word .tail .to{color:var(--gold);position:absolute;left:0;top:0;opacity:0;transform:translateY(60%)}
+.word.swap .tail .from{opacity:0;transform:translateY(-60%)}
+.word.swap .tail .to{opacity:1;transform:none}
+.bridge .note{margin:14px 0 0;font-size:.95rem;opacity:.85}
+.bridge .dots{display:flex;gap:6px;margin-top:16px}
+.bridge .dots i{width:22px;height:4px;border-radius:4px;background:rgba(255,255,255,.25)}
+.bridge .dots i.on{background:var(--gold)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:44px 0 56px;gap:32px}}
+
+/* ---------- sections ---------- */
+main section{padding:64px 0}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head h2{font:800 clamp(1.7rem,3vw,2.3rem)/1.1 var(--display);margin:0;color:var(--unah);letter-spacing:-.01em}
+.sec-head p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px}
+
+/* video */
+.video-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:start}
+.frame{position:relative;padding-bottom:56.25%;border-radius:var(--radius-lg);overflow:hidden;background:#000;box-shadow:0 18px 40px -24px rgba(0,38,79,.6)}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.goals h3{font:700 1.2rem var(--display);margin:0 0 10px;color:var(--unah)}
+.goals ul{padding:0;margin:0 0 18px;list-style:none}
+.goals li{padding:10px 0 10px 36px;border-bottom:1px dashed var(--line);position:relative}
+.goals li::before{content:"";position:absolute;left:4px;top:14px;width:18px;height:18px;border-radius:50%;border:3px solid var(--gold)}
+details.comp{border-top:1px solid var(--line);padding-top:12px}
+details.comp summary{cursor:pointer;font-weight:700;color:var(--blue)}
+details.comp p{font-size:.95rem;color:var(--muted)}
+@media (max-width:860px){.video-grid{grid-template-columns:1fr}}
+
+/* activity route */
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-bottom:8px}
+.stop{position:relative;padding:0 16px 0 0}
+.stop .node{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stop .num{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:800 1.2rem var(--display);background:var(--paper);color:var(--unah);border:3px solid var(--unah);position:relative;z-index:1;flex:none}
+.stop.done .num{background:var(--gold);border-color:var(--gold);color:var(--unah-deep)}
+.stop .rail{flex:1;height:4px;border-radius:4px;background:var(--line)}
+.stop.done .rail{background:var(--gold)}
+.stop:last-child .rail{visibility:hidden}
+.stop .kind{font-size:.85rem;color:var(--muted)}
+.stop h3{font:700 1.08rem/1.25 var(--display);margin:2px 0 8px}
+.stop h3 a{color:var(--ink);text-decoration:none}
+.stop h3 a:hover{color:var(--blue);text-decoration:underline}
+.pct{display:inline-block;font:800 .9rem var(--display);background:var(--gold-soft);color:#8a5a00;padding:2px 8px;border-radius:6px}
+.stop p{margin:8px 0 0;font-size:.95rem;color:var(--muted)}
+.cal{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.path{grid-template-columns:1fr;gap:22px}.stop .rail{display:none}}
+
+/* activity detail blocks */
+.act{display:grid;grid-template-columns:280px 1fr;gap:28px;padding:28px 0;border-top:1px solid var(--line)}
+.act:first-of-type{border-top:0}
+.act aside{position:sticky;top:100px;align-self:start}
+.act .tag{display:inline-block;font-weight:700;font-size:.85rem;color:var(--blue);background:var(--blue-soft);padding:3px 10px;border-radius:999px}
+.act aside h3{font:800 1.45rem/1.15 var(--display);margin:10px 0 8px;color:var(--unah)}
+.act aside p{margin:0 0 14px;color:var(--muted)}
+.check{display:flex;gap:10px;align-items:center;cursor:pointer;font-weight:700;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--paper);user-select:none}
+.check input{width:20px;height:20px;accent-color:var(--green)}
+.check.on{border-color:var(--green);background:var(--green-soft);color:var(--green)}
+.res-list{display:grid;gap:12px}
+.res{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-md);padding:16px 18px}
+.res .stage{width:56px;text-align:center;font:800 .78rem/1.1 var(--display);color:var(--unah)}
+.res .stage b{display:block;font-size:1.4rem;color:var(--gold)}
+.res h4{margin:0;font:700 1.05rem/1.3 var(--display)}
+.res .src{font-size:.88rem;color:var(--muted)}
+.res .what{margin:4px 0 0}
+.res .helps{margin:6px 0 0;font-size:.88rem;color:var(--muted)}
+.res .req{font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--green-soft);color:var(--green);margin-left:6px;vertical-align:middle}
+.res .req.opt{background:#EEF1F6;color:var(--muted)}
+.res.extra{border:2px dashed var(--gold);background:var(--gold-soft)}
+.res.visited{border-left:6px solid var(--green)}
+@media (max-width:860px){.act{grid-template-columns:1fr}.act aside{position:static}.res{grid-template-columns:1fr}.res .stage{text-align:left;width:auto}.res .stage b{display:inline;margin-right:6px}}
+
+/* practice lab */
+.lab{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.lab .panel h3{font:800 1.3rem var(--display);color:var(--unah);margin:0 0 4px}
+.lab .panel > p{color:var(--muted);margin:0 0 16px}
+.lab .wide{grid-column:1/-1}
+.abc{display:grid;grid-template-columns:repeat(13,1fr);gap:6px}
+.abc button{aspect-ratio:1;border:2px solid var(--line);background:var(--paper);border-radius:10px;font:800 1.15rem var(--display);color:var(--unah);cursor:pointer}
+.abc button.tricky{border-color:var(--gold);background:var(--gold-soft)}
+.abc button:hover{border-color:var(--blue);color:var(--blue)}
+.abc button.say{background:var(--blue);border-color:var(--blue);color:#fff}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);margin-top:12px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:6px;border:2px solid var(--gold);background:var(--gold-soft)}
+.spell{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+input[type=text]{font:1rem var(--body);padding:11px 14px;border:2px solid var(--line);border-radius:10px;flex:1;min-width:180px;color:var(--ink);background:#fff}
+input[type=text]:focus{border-color:var(--blue);outline:none}
+.phrases{display:grid;gap:8px}
+.phrase{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--bg)}
+.phrase .play{flex:none}
+.play{width:40px;height:40px;border-radius:50%;border:0;background:var(--blue);color:#fff;cursor:pointer;display:grid;place-items:center}
+.play svg{width:16px;height:16px}
+.play:hover{background:#00468a}
+.phrase span{font-weight:700}
+.phrase small{display:block;font-weight:400;color:var(--muted)}
+.sorter .card{border:2px solid var(--line);border-radius:var(--radius-md);padding:22px;text-align:center}
+.sorter .w{font:800 2.2rem var(--display);color:var(--unah)}
+.sorter .choices{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.sorter .fb{min-height:3.2em;margin-top:14px;font-weight:700}
+.fb.ok{color:var(--green)}
+.fb.no{color:var(--red)}
+.sorter .score{font-size:.9rem;color:var(--muted);margin-top:6px}
+.builder .out{margin-top:16px;padding:18px 20px;border-radius:var(--radius-md);background:var(--unah);color:#fff;font:700 1.15rem/1.6 var(--display)}
+.builder .out em{font-style:normal;color:var(--gold)}
+.builder .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.builder label{font-size:.9rem;font-weight:700;color:var(--muted);display:block;margin-bottom:4px}
+.builder select{font:1rem var(--body);padding:11px 12px;border:2px solid var(--line);border-radius:10px;width:100%;background:#fff;color:var(--ink)}
+@media (max-width:860px){.lab{grid-template-columns:1fr}.abc{grid-template-columns:repeat(7,1fr)}.builder .grid{grid-template-columns:1fr}}
+
+/* career + steps */
+.career{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:var(--unah);color:#fff;display:grid;place-items:center;font:800 1rem var(--display)}
+.steps b{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--blue-soft);color:var(--blue);padding:4px 12px;border-radius:999px;font-weight:700;font-size:.92rem}
+@media (max-width:860px){.career{grid-template-columns:1fr}}
+
+/* ai rules + tools */
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.rule{border-radius:var(--radius-md);padding:16px;border:2px solid}
+.rule h4{margin:0 0 6px;font:800 1.05rem var(--display)}
+.rule.ok{border-color:#9fd6c2;background:var(--green-soft)}
+.rule.ok h4{color:var(--green)}
+.rule.care{border-color:#f6cf86;background:var(--gold-soft)}
+.rule.care h4{color:#8a5a00}
+.rule.no{border-color:#f0a7b2;background:var(--red-soft)}
+.rule.no h4{color:var(--red)}
+.tools{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+.sofia{background:linear-gradient(135deg,var(--unah) 0%,#0a4c94 100%);color:#fff;border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
+.sofia h3{font:800 1.6rem var(--display);margin:0 0 8px}
+.sofia p{opacity:.9;margin:0 0 18px}
+.sofia .avatar{width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--unah-deep);display:grid;place-items:center;font:800 1.7rem var(--display);margin-bottom:14px}
+.soon{display:inline-block;background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;font-weight:700;font-size:.9rem}
+@media (max-width:860px){.tools,.rules{grid-template-columns:1fr}}
+
+/* more + refs + footer */
+.more{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.refs{font-size:.92rem;color:var(--muted)}
+.refs p{margin:0 0 10px;padding-left:24px;text-indent:-24px;overflow-wrap:anywhere}
+.spanish{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:var(--gold);color:var(--unah-deep);border-radius:var(--radius-lg);padding:26px 28px;margin-top:28px}
+.spanish h3{margin:0;font:800 1.4rem var(--display)}
+.spanish p{margin:4px 0 0}
+.spanish .btn{background:var(--unah);color:#fff}
+footer{background:var(--unah-deep);color:#cfe0f5;padding:36px 0;font-size:.92rem;margin-top:24px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer strong{color:#fff}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);opacity:0;visibility:hidden;background:var(--green);color:#fff;font-weight:700;padding:12px 18px;border-radius:12px;transition:transform .3s ease;z-index:60}
+.toast.show{transform:translateX(-50%);opacity:1;visibility:visible}
+.toast{transition:transform .3s ease,opacity .3s ease,visibility .3s}
+@media (max-width:860px){.more{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* additions for the multi-lesson template */
+.video-soon{border-radius:var(--radius-lg);background:var(--unah);color:#fff;padding:48px 28px;text-align:center;font:700 1.15rem var(--display);min-height:220px;display:grid;place-items:center}
+.lessons-nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}
+.lessons-nav a{text-decoration:none}
+.builder .grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.sorter .w{overflow-wrap:anywhere}
+.path.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.path.three{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../../index.html" title="Home"><span class="seal" aria-hidden="true">UNAH</span><span>Inglés I<small>IN-101, A1.1</small></span></a>
+    <nav class="route" id="route" aria-label="Actividades de esta lección"></nav>
+    <a class="lang" href="../en/index.html" hreflang="en" lang="en" title="Read this lesson in English">English</a>
+    <div class="progress-pill" aria-live="polite"><span id="pDone">0</span>/<span id="pTotal">4</span> hechas</div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="unit" id="unitLabel"></span>
+      <h1 id="title"></h1>
+      <p class="lead" id="lead"></p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#activities">Ver mis actividades</a>
+        <a class="btn btn-ghost" href="#video">Ver el video</a>
+      </div>
+    </div>
+    <div class="bridge" aria-label="Palabras y frases en español que se convierten en inglés">
+      <div class="row"><span class="flag es">Español</span> se convierte en <span class="flag en">English</span></div>
+      <div class="word" id="word" aria-live="polite"></div>
+      <p class="note" id="bridgeNote"></p>
+      <div class="dots" id="dots" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <section id="video">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Empieza aquí</h2><p>Mira el video. Luego lee tus metas para esta lección.</p></div></div>
+      <div class="video-grid">
+        <div>
+          <div id="videoBox"></div>
+          <p style="margin-top:12px"><a class="btn btn-line btn-sm" id="transcript" target="_blank" rel="noopener">Leer la transcripción</a></p>
+        </div>
+        <div class="panel goals">
+          <h3>Al terminar esta lección, podrás:</h3>
+          <ul id="goals"></ul>
+          <details class="comp"><summary>Competencia de la lección</summary><p id="competence"></p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Tus 3 actividades</h2><p>Hazlas en orden. Cada una te prepara para la siguiente.</p></div></div>
+      <div class="path" id="path"></div>
+      <div class="cal">Todas las fechas están en el Calendario oficial. <a class="btn btn-blue btn-sm" id="calendar" target="_blank" rel="noopener">Abrir el Calendario oficial</a></div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Recursos para cada actividad</h2><p>Recursos gratuitos del Reino Unido, Estados Unidos y Australia. Están en inglés. Ábrelos antes de empezar cada actividad.</p></div></div>
+      <div id="acts"></div>
+    </div>
+  </section>
+
+  <section id="practice" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Laboratorio de práctica</h2><p>Haz clic, escucha y prueba. Esta práctica no tiene nota.</p></div></div>
+      <div class="lab">
+        <div class="panel wide" id="abcPanel" hidden>
+          <h3>El alfabeto</h3>
+          <p>Haz clic en una letra para escucharla en inglés. Las letras amarillas suenan distinto que en español.</p>
+          <div class="abc" id="abc"></div>
+          <div class="legend"><span><i></i>Cuidado con estas letras</span></div>
+          <div class="spell">
+            <label class="sr-only" for="spellIn">Tu nombre</label>
+            <input type="text" id="spellIn" placeholder="Escribe tu nombre" autocomplete="off">
+            <button class="btn btn-blue btn-sm" id="spellBtn" type="button">Deletrear</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3 id="phrasesH">Escucha y repite</h3>
+          <p>Haz clic para oír cada oración. Dila en voz alta.</p>
+          <div class="phrases" id="phrases"></div>
+        </div>
+        <div class="panel sorter">
+          <h3 id="sorterH"></h3>
+          <p id="sorterP"></p>
+          <div class="card">
+            <div class="w" id="sw"></div>
+            <div class="choices">
+              <button class="btn btn-blue btn-sm" type="button" id="sA"></button>
+              <button class="btn btn-line btn-sm" type="button" id="sB"></button>
+            </div>
+            <div class="fb" id="sfb" aria-live="polite"></div>
+            <button class="btn btn-gold btn-sm" type="button" id="snext">Siguiente</button>
+            <div class="score" id="sscore"></div>
+          </div>
+        </div>
+        <div class="panel wide builder">
+          <h3 id="builderH"></h3>
+          <p id="builderP"></p>
+          <div class="grid" id="bFields"></div>
+          <div class="out" id="bOut" aria-live="polite"></div>
+          <p style="margin:12px 0 0"><button class="btn btn-blue btn-sm" id="bPlay" type="button">Escuchar</button></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="career">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Mi carrera en inglés</h2><p>Tu inglés también es para tu carrera.</p></div></div>
+      <div class="career">
+        <div class="panel">
+          <p style="margin-top:0" id="careerText"></p>
+          <div class="chips" id="chips"></div>
+          <p style="margin-bottom:0;color:var(--muted)">Opcional: agrega estas palabras a tu glosario de carrera. Crece en cada lección.</p>
+        </div>
+        <ol class="steps">
+          <li><div><b>Intenta primero</b>Escribe tu propia versión sin ayuda.</div></li>
+          <li><div><b>Consulta</b>Usa la IA o un diccionario solo para comprobar.</div></li>
+          <li><div><b>Verifica</b>Busca cada palabra nueva en un diccionario.</div></li>
+          <li><div><b>Escribe</b>Escribe tu versión final con tus propias palabras.</div></li>
+          <li><div><b>Reflexiona</b>Escribe una línea: "Today I learned…"</div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Ayuda para comprender</h2><p>Usa herramientas para entender, no para hacer tus actividades.</p></div></div>
+      <div class="tools">
+        <div>
+          <ol class="steps">
+            <li><div><b>Escucha o lee primero</b>Sin ayuda la primera vez.</div></li>
+            <li><div><b>Activa los subtítulos en inglés</b>Haz clic en CC en YouTube.</div></li>
+            <li><div><b>Busca las palabras clave</b>Usa un diccionario.</div></li>
+            <li><div><b>Usa un traductor solo para comprobar</b>No para escribir.</div></li>
+            <li><div><b>Vuelve a escuchar o leer</b>Esta vez sin ayuda.</div></li>
+          </ol>
+          <p style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+            <a class="btn btn-line btn-sm" href="https://support.google.com/youtube/answer/100078" target="_blank" rel="noopener">Cómo usar los subtítulos</a>
+            <a class="btn btn-line btn-sm" href="https://www.britannica.com/dictionary" target="_blank" rel="noopener">Diccionario para estudiantes</a>
+          </p>
+        </div>
+        <div class="sofia">
+          <div class="avatar" aria-hidden="true">S</div>
+          <h3>Pregúntale a Sofía</h3>
+          <p>Sofía es tu asistente de IA en este curso. Te ayuda a comprender, pero no hace tus actividades.</p>
+          <span class="soon">Muy pronto</span>
+        </div>
+      </div>
+      <div class="rules">
+        <div class="rule ok"><h4>Sí</h4>Comprobar una palabra. Practicar la pronunciación. Revisar una oración.</div>
+        <div class="rule care"><h4>Con cuidado</h4>¿Ideas de la IA? Escríbelas de nuevo con tus propias palabras.</div>
+        <div class="rule no"><h4>No</h4>Que la IA haga tu actividad. Usar IA en el quiz. Inventar información.</div>
+      </div>
+      <p style="margin:16px 0 0;color:var(--muted)">¿Usaste IA? Decláralo en tu tarea: la herramienta, para qué la usaste y tu prompt.</p>
+    </div>
+  </section>
+
+  <section id="more">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Ve más allá</h2><p>Opcional. Para quienes quieren más.</p></div></div>
+      <div class="more">
+        <div class="panel"><ul style="margin:0;padding-left:20px" id="moreList"></ul></div>
+        <div class="panel refs">
+          <h3 style="font:800 1.15rem var(--display);color:var(--unah);margin:0 0 12px">Referencias</h3>
+          <div id="refs"></div>
+        </div>
+      </div>
+      <div class="spanish">
+        <div><h3>¿Listo para practicar en inglés?</h3><p>Vuelve a la misma lección, toda en inglés.</p></div>
+        <a class="btn" href="../en/index.html" hreflang="en" lang="en">Back to English</a>
+      </div>
+      <nav class="lessons-nav" aria-label="Lessons">
+        <a class="btn btn-line" id="prevL">Lección anterior</a>
+        <a class="btn btn-line" id="nextL">Lección siguiente</a>
+      </nav>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Universidad Nacional Autónoma de Honduras</strong><br>Facultad de Humanidades y Artes, Departamento de Lenguas Extranjeras, Sección de Inglés</div>
+    <div>IN-101 Inglés I, A1.1<br>Campus Virtual de la UNAH</div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const LESSON = {
+ "n": 9,
+ "unit": "Unidad II: Personal Portraits and Family",
+ "title": "Comparing People and Characteristics",
+ "pct": "8%",
+ "videoId": "",
+ "transcriptUrl": "",
+ "lead": "Más alto, más joven, más creativo: compara a las personas que conoces.",
+ "bridge": [
+  [
+   "más alto que",
+   "taller than"
+  ],
+  [
+   "más joven que",
+   "younger than"
+  ],
+  [
+   "más grande que",
+   "bigger than"
+  ],
+  [
+   "más inteligente que",
+   "more intelligent than"
+  ],
+  [
+   "mejor que",
+   "better than"
+  ]
+ ],
+ "bridgeNote": "Las palabras cortas agregan -er. Las largas usan more.",
+ "goals": [
+  "comparar a dos personas: taller than, older than.",
+  "usar -er y more … than.",
+  "usar better y worse."
+ ],
+ "activities": [
+  {
+   "n": 32,
+   "type": "Foro",
+   "name": "Comparing people I know",
+   "pct": "2%",
+   "todo": "Compara a dos personas que conoces. Responde a un compañero o compañera.",
+   "res": [
+    {
+     "stage": 1,
+     "req": true,
+     "extra": false,
+     "title": "Let's Learn English, Level 1, Lesson 15: I Love People Watching!",
+     "src": "VOA Learning English, Estados Unidos",
+     "url": "https://learningenglish.voanews.com/a/lets-learn-english-lesson-15-i-love-people-watching/3343720.html",
+     "what": "Mira otra vez. ¿En qué son diferentes las personas? 10 minutos.",
+     "helps": "diferencias y semejanzas"
+    },
+    {
+     "stage": 2,
+     "req": true,
+     "extra": false,
+     "title": "Comparative adjectives",
+     "src": "British Council LearnEnglish, Reino Unido",
+     "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+     "what": "Lee la explicación. 15 minutos.",
+     "helps": "taller than, more … than"
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "type": "H5P",
+   "name": "Understanding how to compare people in English",
+   "pct": "1%",
+   "todo": "Lee y escucha comparaciones. Elige las respuestas correctas.",
+   "res": [
+    {
+     "stage": 2,
+     "req": false,
+     "extra": false,
+     "title": "Comparative and superlative adjectives",
+     "src": "British Council LearnEnglish, Reino Unido",
+     "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives",
+     "what": "Lee la parte de nivel principiante. 10 minutos.",
+     "helps": "reglas de -er y more"
+    },
+    {
+     "stage": 3,
+     "req": true,
+     "extra": false,
+     "title": "Comparative adjectives",
+     "src": "British Council LearnEnglish, Reino Unido",
+     "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+     "what": "Haz los ejercicios. 15 minutos.",
+     "helps": "comparativos"
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "type": "Tarea",
+   "name": "The Best Portrait — Flip video",
+   "pct": "5%",
+   "todo": "Graba un video breve comparando a dos personas que conoces. Grábalo con la herramienta de video que indique tu docente en el Campus Virtual de la UNAH.",
+   "res": [
+    {
+     "stage": 3,
+     "req": true,
+     "extra": false,
+     "title": "Comparative adjectives",
+     "src": "British Council LearnEnglish, Reino Unido",
+     "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+     "what": "Haz otra vez los ejercicios antes de grabar. 10 minutos.",
+     "helps": "comparativos correctos"
+    },
+    {
+     "stage": 4,
+     "req": true,
+     "extra": false,
+     "title": "Talking about other people",
+     "src": "British Council LearnEnglish, Reino Unido",
+     "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people",
+     "what": "Mira y repite. Usa las frases en tu video. 15 minutos.",
+     "helps": "tu video"
+    }
+   ]
+  }
+ ],
+ "lab": {
+  "abc": false,
+  "phrases": [
+   [
+    "My brother is taller than me.",
+    "Palabra corta + -er."
+   ],
+   [
+    "My sister is younger than my brother.",
+    "Edad."
+   ],
+   [
+    "Ana is more creative than Luis.",
+    "Palabra larga: more."
+   ],
+   [
+    "This book is better than that book.",
+    "Good → better."
+   ],
+   [
+    "My city is bigger than my town.",
+    "Big → bigger."
+   ]
+  ],
+  "sorter": {
+   "h": "¿Correcta o no?",
+   "p": "Observa la comparación. ¿Es correcta?",
+   "a": [
+    "y",
+    "Correcta"
+   ],
+   "b": [
+    "n",
+    "Incorrecta"
+   ],
+   "items": [
+    [
+     "She is taller than me.",
+     "y",
+     "Correcta."
+    ],
+    [
+     "He is more tall than me.",
+     "n",
+     "Forma correcta: He is taller than me."
+    ],
+    [
+     "My car is older than your car.",
+     "y",
+     "Correcta."
+    ],
+    [
+     "She is more creative than him.",
+     "y",
+     "Correcta: palabra larga + more."
+    ],
+    [
+     "This is more good.",
+     "n",
+     "Forma correcta: This is better."
+    ],
+    [
+     "It is biger.",
+     "n",
+     "Forma correcta: It is bigger."
+    ],
+    [
+     "He is younger than his sister.",
+     "y",
+     "Correcta."
+    ],
+    [
+     "Tegucigalpa is bigger than Comayagua.",
+     "y",
+     "Correcta."
+    ]
+   ]
+  },
+  "builder": {
+   "h": "Compara a dos personas",
+   "p": "Escribe y elige. Escucha. Luego prepara tu video para la Actividad 34.",
+   "fields": [
+    {
+     "id": "p1",
+     "label": "Persona 1",
+     "ph": "My sister"
+    },
+    {
+     "id": "adj",
+     "label": "Comparación",
+     "options": [
+      "taller",
+      "older",
+      "younger",
+      "more creative",
+      "more patient"
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "Persona 2",
+     "ph": "my brother"
+    }
+   ],
+   "tpl": "{p1} is {adj} than {p2}."
+  }
+ },
+ "career": "En la Actividad 34, compara dos cosas de tu carrera: <strong>\"A hospital is bigger than a clinic.\"</strong>",
+ "chips": [
+  "bigger",
+  "faster",
+  "more modern",
+  "more important",
+  "cheaper",
+  "safer"
+ ],
+ "more": [
+  "Compara dos ciudades de Honduras en 5 oraciones.",
+  "Aprende el superlativo: the tallest, the best."
+ ],
+ "competence": "Utiliza los comparativos simples y el vocabulario de comparative adjectives, en el desarrollo virtual del curso, mediante las tres actividades de la lección (foro, H5P y tarea en video), para comunicarse sobre «Comparing People and Characteristics» de forma comprensible para un interlocutor, con uso funcional de las estructuras A1.1 y apoyo visual o textual cuando sea necesario.",
+ "refs": [
+  "British Council. (s. f.-a). <em>Comparative adjectives</em>. LearnEnglish. Recuperado el 13 de octubre de 2026, de https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/comparative-adjectives",
+  "British Council. (s. f.-b). <em>Comparative and superlative adjectives</em>. LearnEnglish. Recuperado el 13 de octubre de 2026, de https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/comparative-superlative-adjectives",
+  "British Council. (s. f.-c). <em>Talking about other people</em>. LearnEnglish. Recuperado el 13 de octubre de 2026, de https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people",
+  "VOA Learning English. (s. f.). <em>Let&#x27;s Learn English, Level 1, Lesson 15: I Love People Watching!</em> https://learningenglish.voanews.com/a/lets-learn-english-lesson-15-i-love-people-watching/3343720.html"
+ ],
+ "calendarUrl": "https://drive.google.com/file/d/1Pk6PYLuJmzpOteETqkMVe-X6XvAi9x1Y/view",
+ "id": "IN101-L09",
+ "prevUrl": "../../ura8/es/index.html",
+ "nextUrl": "../../ura10/es/index.html"
+};
+const T = {"lang": "es", "other": "en", "otherLabel": "English", "otherTitle": "Read this lesson in English", "skip": "Ir al contenido", "course": "Inglés I", "navLabel": "Actividades de esta lección", "done": "hechas", "seeActs": "Ver mis actividades", "watch": "Ver el video", "bridgeLabel": "Palabras y frases en español que se convierten en inglés", "es": "Español", "becomes": "se convierte en", "en": "English", "startH": "Empieza aquí", "startP": "Mira el video. Luego lee tus metas para esta lección.", "videoTitle": "Video de la lección", "videoSoon": "El video de esta lección estará disponible muy pronto.", "transcript": "Leer la transcripción", "transcriptSoon": "Transcripción muy pronto", "goalsH": "Al terminar esta lección, podrás:", "compH": "Competencia de la lección", "actsH": "Tus {count} actividades", "actsP": "Hazlas en orden. Cada una te prepara para la siguiente.", "calText": "Todas las fechas están en el Calendario oficial.", "calBtn": "Abrir el Calendario oficial", "resH": "Recursos para cada actividad", "resP": "Recursos gratuitos del Reino Unido, Estados Unidos y Australia. Están en inglés. Ábrelos antes de empezar cada actividad.", "labH": "Laboratorio de práctica", "labP": "Haz clic, escucha y prueba. Esta práctica no tiene nota.", "abcH": "El alfabeto", "abcP": "Haz clic en una letra para escucharla en inglés. Las letras amarillas suenan distinto que en español.", "abcLegend": "Cuidado con estas letras", "yourName": "Tu nombre", "writeName": "Escribe tu nombre", "spell": "Deletrear", "phrasesH": "Escucha y repite", "phrasesP": "Haz clic para oír cada oración. Dila en voz alta.", "next": "Siguiente", "listen": "Escuchar", "careerH": "Mi carrera en inglés", "careerP": "Tu inglés también es para tu carrera.", "careerOpt": "Opcional: agrega estas palabras a tu glosario de carrera. Crece en cada lección.", "st1": "Intenta primero", "st1d": "Escribe tu propia versión sin ayuda.", "st2": "Consulta", "st2d": "Usa la IA o un diccionario solo para comprobar.", "st3": "Verifica", "st3d": "Busca cada palabra nueva en un diccionario.", "st4": "Escribe", "st4d": "Escribe tu versión final con tus propias palabras.", "st5": "Reflexiona", "st5d": "Escribe una línea: \"Today I learned…\"", "helpH": "Ayuda para comprender", "helpP": "Usa herramientas para entender, no para hacer tus actividades.", "h1": "Escucha o lee primero", "h1d": "Sin ayuda la primera vez.", "h2": "Activa los subtítulos en inglés", "h2d": "Haz clic en CC en YouTube.", "h3": "Busca las palabras clave", "h3d": "Usa un diccionario.", "h4": "Usa un traductor solo para comprobar", "h4d": "No para escribir.", "h5": "Vuelve a escuchar o leer", "h5d": "Esta vez sin ayuda.", "subs": "Cómo usar los subtítulos", "dict": "Diccionario para estudiantes", "sofiaH": "Pregúntale a Sofía", "sofiaP": "Sofía es tu asistente de IA en este curso. Te ayuda a comprender, pero no hace tus actividades.", "soon": "Muy pronto", "okH": "Sí", "okP": "Comprobar una palabra. Practicar la pronunciación. Revisar una oración.", "careH": "Con cuidado", "careP": "¿Ideas de la IA? Escríbelas de nuevo con tus propias palabras.", "noH": "No", "noP": "Que la IA haga tu actividad. Usar IA en el quiz. Inventar información.", "declare": "¿Usaste IA? Decláralo en tu tarea: la herramienta, para qué la usaste y tu prompt.", "moreH": "Ve más allá", "moreP": "Opcional. Para quienes quieren más.", "refsH": "Referencias", "switchH": "¿Listo para practicar en inglés?", "switchP": "Vuelve a la misma lección, toda en inglés.", "switchBtn": "Back to English", "prev": "Lección anterior", "nextL": "Lección siguiente", "footer1": "Facultad de Humanidades y Artes, Departamento de Lenguas Extranjeras, Sección de Inglés", "footer2": "IN-101 Inglés I, A1.1<br>Campus Virtual de la UNAH", "lesson": "Lección", "activity": "Actividad", "finished": "Terminé esta actividad", "req": "Obligatorio", "opt": "Opcional", "helps": "Te ayuda en la Actividad", "open": "Abrir", "newTab": "pestaña nueva", "allDone": "¡Excelente! Terminaste la Lección {n}.", "actDone": "Actividad {n} terminada.", "noAudio": "Tu navegador no puede reproducir audio aquí.", "nameFirst": "Primero escribe tu nombre.", "letter": "Letra", "listenTo": "Escuchar:", "correct": "¡Correcto! ", "notThis": "Esta vez no. ", "scoreOf": "{ok} de {seen} correctas", "stages": ["Extra", "Activación", "Comprensión", "Práctica", "Producción", "Verificación"], "titleSuffix": "IN-101 Inglés I | UNAH"};
+
+/* ========================== helpers ========================== */
+const $ = s => document.querySelector(s);
+const el = (tag, attrs={}, html="") => { const e=document.createElement(tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (html) e.innerHTML=html; return e; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
+const KEY = "ura-" + LESSON.id;
+const store = {
+  get(){ try { return JSON.parse(localStorage.getItem(KEY)) || {done:[],visited:[]}; } catch(e){ return {done:[],visited:[]}; } },
+  set(v){ try { localStorage.setItem(KEY, JSON.stringify(v)); } catch(e){} }
+};
+let state = store.get();
+const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("show"),2200); }
+const canSpeak = "speechSynthesis" in window;
+function speak(text, rate=.85){
+  if (!canSpeak) { toast(T.noAudio); return; }
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const vs = speechSynthesis.getVoices();
+  const v = vs.find(v => /^en(-|_)(US|GB)/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
+  if (v) u.voice = v; u.lang = v ? v.lang : "en-US"; u.rate = rate;
+  speechSynthesis.speak(u);
+}
+const PLAY = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 2.5v11l9-5.5z"/></svg>';
+function linkOrSoon(a, url, soonText){ if (url) a.href = url; else { a.removeAttribute("href"); a.setAttribute("aria-disabled","true"); a.setAttribute("role","link"); if (soonText) a.textContent = soonText; } }
+
+/* ========================== header, video, goals ========================== */
+const total = LESSON.activities.length;
+$("#pTotal").textContent = total;
+$("#unitLabel").innerHTML = `${esc(LESSON.unit)}, ${T.lesson} ${LESSON.n} <strong>${esc(LESSON.pct)}</strong>`;
+$("#title").textContent = LESSON.title;
+$("#lead").textContent = LESSON.lead;
+$("#bridgeNote").textContent = LESSON.bridgeNote;
+if (LESSON.videoId) {
+  $("#videoBox").innerHTML = `<div class="frame"><iframe title="${esc(T.lesson+' '+LESSON.n+': '+LESSON.title)}" src="https://www.youtube-nocookie.com/embed/${esc(LESSON.videoId)}?rel=0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`;
+} else {
+  $("#videoBox").innerHTML = `<div class="video-soon">${esc(T.videoSoon)}</div>`;
+}
+linkOrSoon($("#transcript"), LESSON.transcriptUrl, T.transcriptSoon);
+LESSON.goals.forEach(g => $("#goals").append(el("li",{},esc(g))));
+$("#competence").textContent = LESSON.competence;
+$("#calendar").href = LESSON.calendarUrl;
+LESSON.refs.forEach(r => $("#refs").append(el("p",{},r)));
+LESSON.more.forEach(m => $("#moreList").append(el("li",{},esc(m))));
+$("#careerText").innerHTML = LESSON.career;
+LESSON.chips.forEach(c => $("#chips").append(el("span",{},esc(c))));
+linkOrSoon($("#prevL"), LESSON.prevUrl); if (!LESSON.prevUrl) $("#prevL").hidden = true;
+linkOrSoon($("#nextL"), LESSON.nextUrl); if (!LESSON.nextUrl) $("#nextL").hidden = true;
+if (total === 3) $("#path").classList.add("three");
+
+/* ========================== activities ========================== */
+function renderRoute(){
+  const route = $("#route"), path = $("#path"); route.innerHTML = ""; path.innerHTML = "";
+  LESSON.activities.forEach((a, i) => {
+    const done = state.done.includes(a.n);
+    route.append(el("a",{href:`#act-${a.n}`, class: done?"done":""}, `<b>${a.n}. ${esc(a.type)}</b>${esc(a.pct)}`));
+    path.append(el("div",{class:"stop"+(done?" done":"")},
+      `<div class="node"><span class="num" aria-hidden="true">${done?"✓":i+1}</span><span class="rail"></span></div>
+       <div class="kind">${T.activity} ${a.n}, ${esc(a.type)} <span class="pct">${esc(a.pct)}</span></div>
+       <h3><a href="#act-${a.n}">${esc(a.name)}</a></h3><p>${esc(a.todo)}</p>`));
+  });
+  $("#pDone").textContent = state.done.filter(x => LESSON.activities.some(a => a.n === x)).length;
+}
+function renderActs(){
+  const box = $("#acts"); box.innerHTML = "";
+  LESSON.activities.forEach(a => {
+    const done = state.done.includes(a.n);
+    const sec = el("article",{class:"act", id:`act-${a.n}`});
+    const aside = el("aside");
+    aside.innerHTML = `<span class="tag">${T.activity} ${a.n}, ${esc(a.type)}, ${esc(a.pct)}</span><h3>${esc(a.name)}</h3><p>${esc(a.todo)}</p>`;
+    const lab = el("label",{class:"check"+(done?" on":"")});
+    lab.innerHTML = `<input type="checkbox" ${done?"checked":""}> ${esc(T.finished)}`;
+    lab.querySelector("input").addEventListener("change", e => {
+      state.done = e.target.checked ? [...new Set([...state.done, a.n])] : state.done.filter(x => x!==a.n);
+      store.set(state); lab.classList.toggle("on", e.target.checked); renderRoute();
+      if (e.target.checked) toast(Number($("#pDone").textContent) === total ? fmt(T.allDone,{n:LESSON.n}) : fmt(T.actDone,{n:a.n}));
+    });
+    aside.append(lab);
+    const list = el("div",{class:"res-list"});
+    a.res.forEach((r,i) => {
+      const id = `${a.n}-${i}`;
+      const card = el("div",{class:"res"+(r.extra?" extra":"")+(state.visited.includes(id)?" visited":"")});
+      const stage = r.extra ? `<div class="stage"><b>+</b>${T.stages[0]}</div>` : `<div class="stage"><b>${r.stage}</b>${T.stages[r.stage]}</div>`;
+      card.innerHTML = `${stage}
+        <div><h4>${esc(r.title)} <span class="req ${r.req?"":"opt"}">${r.req?T.req:T.opt}</span></h4>
+        <div class="src">${esc(r.src)}</div><p class="what">${esc(r.what)}</p>
+        <p class="helps">${T.helps} ${a.n}: ${esc(r.helps)}</p></div>
+        <a class="btn btn-blue btn-sm" href="${esc(r.url)}" target="_blank" rel="noopener">${T.open}<span class="sr-only"> ${esc(r.title)} (${T.newTab})</span></a>`;
+      card.querySelector("a").addEventListener("click", () => {
+        if (!state.visited.includes(id)) { state.visited.push(id); store.set(state); card.classList.add("visited"); }
+      });
+      list.append(card);
+    });
+    sec.append(aside, list); box.append(sec);
+  });
+}
+
+/* ========================== word bridge ========================== */
+function prefixLen(a,b){ let i=0; const n=x=>x.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase(); const A=n(a),B=n(b); while(i<A.length && i<B.length && A[i]===B[i]) i++; return i; }
+(function bridge(){
+  const w = $("#word"), dots = $("#dots"); let i = 0;
+  LESSON.bridge.forEach(()=>dots.append(el("i")));
+  function show(k){
+    const [es,en] = LESSON.bridge[k]; const p = prefixLen(es,en);
+    w.classList.remove("swap");
+    w.setAttribute("aria-label", `${es}: ${en}`);
+    [...dots.children].forEach((d,j)=>d.classList.toggle("on", j===k));
+    if (reduce) { w.innerHTML = `<span class="same">${esc(es)}</span> <span style="color:var(--gold)">${esc(en)}</span>`; return; }
+    w.innerHTML = `<span class="same">${esc(en.slice(0,p))}</span><span class="tail"><span class="from">${esc(es.slice(p))}</span><span class="to">${esc(en.slice(p))}</span></span>`;
+    setTimeout(()=>w.classList.add("swap"), 1100);
+  }
+  show(0);
+  if (!reduce) setInterval(()=>{ i=(i+1)%LESSON.bridge.length; show(i); }, 3400);
+})();
+
+/* ========================== practice lab ========================== */
+if (LESSON.lab.abc) {
+  $("#abcPanel").hidden = false;
+  const tricky = ["A","E","G","H","I","J","R","W","Y"];
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(L => {
+    const b = el("button",{type:"button", class: tricky.includes(L)?"tricky":"", "aria-label":`${T.letter} ${L}`}, L);
+    b.addEventListener("click", () => { b.classList.add("say"); speak(L, .7); setTimeout(()=>b.classList.remove("say"),600); });
+    $("#abc").append(b);
+  });
+  const spell = () => {
+    const v = $("#spellIn").value.replace(/[^a-zA-ZñÑáéíóúÁÉÍÓÚ ]/g,"").trim();
+    if (!v) { toast(T.nameFirst); $("#spellIn").focus(); return; }
+    speak(v.toUpperCase().split("").map(c => c===" " ? "," : c.normalize("NFD")[0]).join(", "), .65);
+  };
+  $("#spellBtn").addEventListener("click", spell);
+  $("#spellIn").addEventListener("keydown", e => { if (e.key==="Enter") spell(); });
+}
+LESSON.lab.phrases.forEach(([p,when]) => {
+  const row = el("div",{class:"phrase"});
+  const b = el("button",{type:"button", class:"play", "aria-label":`${T.listenTo} ${p}`}, PLAY);
+  b.addEventListener("click", () => speak(p.replace(/…/g," ")));
+  row.append(b, el("div",{},`<span>${esc(p)}</span><small>${esc(when)}</small>`));
+  $("#phrases").append(row);
+});
+(function sorter(){
+  const S = LESSON.lab.sorter;
+  $("#sorterH").textContent = S.h; $("#sorterP").textContent = S.p;
+  $("#sA").textContent = S.a[1]; $("#sA").dataset.a = S.a[0];
+  $("#sB").textContent = S.b[1]; $("#sB").dataset.a = S.b[0];
+  let order = [...S.items].sort(()=>Math.random()-.5), k = 0, ok = 0, answered = false, seen = 0;
+  const w=$("#sw"), fb=$("#sfb"), sc=$("#sscore");
+  function show(){ answered=false; w.textContent = order[k][0]; fb.textContent=""; fb.className="fb"; }
+  [$("#sA"),$("#sB")].forEach(b => b.addEventListener("click", () => {
+    if (answered) return; answered = true; seen++;
+    const right = b.dataset.a === order[k][1]; if (right) ok++;
+    fb.className = "fb " + (right ? "ok" : "no");
+    fb.textContent = (right ? T.correct : T.notThis) + order[k][2];
+    sc.textContent = fmt(T.scoreOf,{ok,seen});
+  }));
+  $("#snext").addEventListener("click", () => { k = (k+1) % order.length; show(); });
+  show();
+})();
+(function builder(){
+  const B = LESSON.lab.builder;
+  $("#builderH").textContent = B.h; $("#builderP").textContent = B.p;
+  B.fields.forEach(f => {
+    const wrap = el("div");
+    wrap.append(el("label",{for:"bf-"+f.id}, esc(f.label)));
+    let input;
+    if (f.options) { input = el("select",{id:"bf-"+f.id}); f.options.forEach(o => input.append(el("option",{value:o},esc(o)))); }
+    else input = el("input",{type:"text", id:"bf-"+f.id, placeholder:f.ph, autocomplete:"off"});
+    input.addEventListener("input", build);
+    wrap.append(input); $("#bFields").append(wrap);
+  });
+  function build(){
+    const html = B.tpl.replace(/\{(\w+)\}/g, (_, id) => { const v = $("#bf-"+id).value.trim(); return `<em>${esc(v || "…")}</em>`; });
+    $("#bOut").innerHTML = html; return $("#bOut").textContent;
+  }
+  $("#bPlay").addEventListener("click", () => speak(build().replace(/…/g," ")));
+  build();
+})();
+if (!canSpeak) document.querySelectorAll(".play,#bPlay,#spellBtn").forEach(b=>b.disabled=true);
+
+renderRoute(); renderActs();
+</script>
+</body>
+</html>
